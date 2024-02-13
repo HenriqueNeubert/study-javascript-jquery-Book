@@ -13,9 +13,9 @@
 
 /////////////////////////////
 
-let varA = 'A' //b
-let varB = 'B' //c
-let varC = 'C' //a
+// let varA = 'A' //b
+// let varB = 'B' //c
+// let varC = 'C' //a
 //
 // varAtemp = varA
 // varBtemp = varB
@@ -27,8 +27,14 @@ let varC = 'C' //a
 
 //OR
 
-[varA, varB, varC] = [varB, varC, varA]
+// [varA, varB, varC] = [varB, varC, varA]
 
-console.log(varA, varB, varC);
+// console.log(varA, varB, varC);
+// console.log(varA)
 
-console.log(typeof(varC))
+
+let nameUser = "henrique"
+
+console.log(nameUser.indexOf('u'));
+console.log(nameUser.match(/[a-z]/g));
+console.log(nameUser.search(/i/g));
