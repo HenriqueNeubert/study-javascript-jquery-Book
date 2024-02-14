@@ -50,17 +50,30 @@
 // console.log(nameUser.search(/i/g)); //pesquisa por param
 
 
-let number1 = 15.243432
-let number2 = 2.5
+// let number1 = 15.243432
+// let number2 = 2.5
 
-console.log(number1.toString() + number2);
-console.log(number1.toString(2)); //Representação binária
-console.log(number1.toFixed(2));//Arredondar (2 casas)
-console.log(Number.isInteger(number1));// verifica se o número é inteiro
+// console.log(number1.toString() + number2);
+// console.log(number1.toString(2)); //Representação binária
+// console.log(number1.toFixed(2));//Arredondar (2 casas)
+// console.log(Number.isInteger(number1));// verifica se o número é inteiro
 
-let temp = number1 * 's'
-console.log(Number.isNaN(temp)); //verifica se a conta é valida via tru/false
+// let temp = number1 * 's'
+// console.log(Number.isNaN(temp)); //verifica se a conta é valida via tru/false
 
-num1 = parseFloat(number1.toFixed(2)) // Transforma em float
-console.log(num1);
-console.log(Number.isSafeInteger(num1));
+// num1 = parseFloat(number1.toFixed(2)) // Transforma em float
+// console.log(num1);
+// console.log(Number.isInteger(num1));
+
+
+let numero1 = 9.542354
+// let numero2 = Math.floor(numero1) // Arredondamento para baixo
+// let numero2 = Math.ceil(numero1) // Arredondamento para cima
+// let numero2 = Math.round(numero1) // Arredondamento para o mais próximo
+// console.log(Math.max(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o maior número
+// console.log(Math.min(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o menor número
+
+const aleatorio = Math.round(Math.random() * (10 - 5) + 5) 
+console.log(aleatorio)
+
+// console.log(numero2);
