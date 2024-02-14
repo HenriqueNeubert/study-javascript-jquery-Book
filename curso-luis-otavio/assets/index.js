@@ -33,17 +33,17 @@
 // console.log(varA)
 
 
-let nameUser = "henrique"
-let newName = replaceName(nameUser)
+// let nameUser = "henrique"
+// let newName = replaceName(nameUser)
 
-function replaceName(nameUser){
-    nameUser = nameUser.replace('henrique', 'Neubert'); // altera param
-    nameUser = nameUser.replace(/e/g, '#'); // g = todos os 'E'
-    nameUser = nameUser.slice(0, 4); // 
-    console.log(nameUser + ': Cortado');// para retirar param
-    return nameUser
-}
-console.log(`${newName} tem 18 anos`);
+// function replaceName(nameUser){
+//     nameUser = nameUser.replace('henrique', 'Neubert'); // altera param
+//     nameUser = nameUser.replace(/e/g, '#'); // g = todos os 'E'
+//     nameUser = nameUser.slice(0, 4); // 
+//     console.log(nameUser + ': Cortado');// para retirar param
+//     return nameUser
+// }
+// console.log(`${newName} tem 18 anos`);
 
 // console.log(nameUser.indexOf('u')); //procura pelo index
 // console.log(nameUser.match(/[a-z]/g));

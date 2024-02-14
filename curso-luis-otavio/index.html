@@ -5,6 +5,18 @@
     <title>Page HTML</title>
   </head>
   <body>
+    <script>
+      const name = prompt("Digite seu nome?")
+      const nameLength = name.length
+      const second = name.slice(1, 2);
+      const firstIndex = name.slice()
+
+      
+      document.body.innerHTML = `Seu nome é ${name} <br/>` 
+      document.body.innerHTML += `Seu nome tem ${nameLength} letras <br/>` 
+      document.body.innerHTML += `A segunda letra é ${second} <br/>`
+
+    </script>
     <script src="assets/index.js"></script>
   </body>
 </html>
