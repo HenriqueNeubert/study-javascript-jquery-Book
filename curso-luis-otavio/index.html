@@ -5,18 +5,29 @@
     <title>Page HTML</title>
   </head>
   <body>
-    <script>
-      const name = prompt("Digite seu nome?")
-      const nameLength = name.length
-      const second = name.slice(1, 2);
-      const firstIndex = name.slice()
+      <!-- <script> //Exercices
+        const name = prompt("Digite seu nome?")
+        const nameLength = name.length
+        // const second = name.slice(1, 2);
+        const second = name[1];
+        const firstIndex = name.indexOf('e')
+        const lastIndex = name.lastIndexOf('e')
+        const nameLastThree = name.slice(-3, name.length)
+        const nameComplete = name.split(' ')
+        const nameUpper = name.toUpperCase()
+        const nameLower = name.toLowerCase()
 
-      
-      document.body.innerHTML = `Seu nome é ${name} <br/>` 
-      document.body.innerHTML += `Seu nome tem ${nameLength} letras <br/>` 
-      document.body.innerHTML += `A segunda letra é ${second} <br/>`
+        document.body.innerHTML = `Seu nome é ${name} <br/>` 
+        document.body.innerHTML += `Seu nome tem ${nameLength} letras <br/>` 
+        document.body.innerHTML += `A segunda letra é ${second} <br/>`
+        document.body.innerHTML += `O primeiro 'E' fica no index ${firstIndex} <br/>`
+        document.body.innerHTML += `O último 'E' fica no index ${lastIndex} <br/>`
+        document.body.innerHTML += `As 3 últimas letras são: ${nameLastThree} <br/>` 
+        document.body.innerHTML += `As palavras do seu nome são ${nameComplete}<br/>` 
+        document.body.innerHTML += `Seu nome em Maiusculo é ${nameUpper}<br/>` 
+        document.body.innerHTML += `Seu nome em Minusculo é ${nameLower}<br/>` 
 
-    </script>
+      </script> -->
     <script src="assets/index.js"></script>
   </body>
 </html>
