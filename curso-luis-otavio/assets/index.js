@@ -84,25 +84,30 @@ function number(){
     const numberDigit = Number(prompt("Digit a number:"))//numero digitado
     const numberDivNan = document.getElementById('numberDivNan')//numero impresso
     const numberNan = isNaN(numberDigit)
+    const numberRoundUp = document.getElementById('numberRoundUp')
+    const numberRoundDown = document.getElementById('numberRoundDown')
+    const numberDecimalTwo = document.getElementById('numberDecimalTwo')
+    
     
     if (numberDigit !== 0 && numberNan == false){
         number.innerHTML = `<p>1 - This is digited number : ${numberDigit}</p> </br>`
-        console.log('digito aceito');
     }else{
         number.innerHTML = `<p>1 - Error (Please: digite a valid number!): ${numberDigit}</p> </br>`
-        console.log('digito não aceito');
     }
     //Raiz quadrada
 
+    console.log(number * nummber);
+
     if(numberNan == false){
-        numberDivNan.innerHTML = `2 - This is a number: NaN = ${numberNan} </br>`   
+        numberDivNan.innerHTML = `<p>2 - This is a number: NaN = ${numberNan}</p> </br>`   
     }
     if(numberNan == true){
-        numberDivNan.innerHTML = `2 - This is'not a number: NaN = ${numberNan} </br>`
+        numberDivNan.innerHTML = `<p>2 - This is'not a number: NaN = ${numberNan}</p> </br>`
     }
     
-    //Arredondar baixo
-    //Arredondar cima
-    //Duas casas decimais 
+    numberRoundUp.innerHTML = `<p>3 - Number round up: ${Math.ceil(numberDigit)}</p> </br>`
+    numberRoundDown.innerHTML = `<p>4 - Number round down: ${Math.floor(numberDigit)}</p> </br>`
+    numberDecimalTwo.innerHTML = `5 - Number in two decimal: ${numberDigit.toFixed(2)} </br>`    
+
     
 }
