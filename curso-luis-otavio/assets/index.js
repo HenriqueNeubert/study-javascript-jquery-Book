@@ -75,8 +75,8 @@ function testingCode04(){
 	console.log(Number.isInteger(num1));
 
 	let numero1 = 9.542354
-	let numero2 = Math.floor(numero1) // Arredondamento para baixo
-	let numero2 = Math.ceil(numero1) // Arredondamento para cima
+	// let numero2 = Math.floor(numero1) // Arredondamento para baixo
+	// let numero2 = Math.ceil(numero1) // Arredondamento para cima
 	let numero2 = Math.round(numero1) // Arredondamento para o mais próximo
 	console.log(Math.max(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o maior número
 	console.log(Math.min(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o menor número
@@ -88,7 +88,7 @@ function testingCode04(){
 
 }
 
-testingCode05();
+// testingCode05();
 function testingCode05() {
   const number = document.getElementById("number"); //numero impresso
   const numberDigit = parseFloat(prompt("Digit a number:")); //numero digitado
@@ -129,4 +129,26 @@ function testingCode05() {
   } else {
     numberInteger.innerHTML = `<p>7 - Is the Number interager? No, the number is not integer</p> </br>`;
   }
+}
+
+// ARRAYS //
+testingCode06();
+function testingCode06(){
+	const alunos = ["Henrique", "Carol", "Luis"]
+	alunos[0] = "Neubert"
+	alunos[alunos.length] = "Carlos"
+	alunos[alunos.length] = "João" //para adicionar
+	alunos.push("Otavio") // melhor forma para adicionar
+	alunos.unshift("José") //adiciona na frente
+	const removido = alunos.pop() //remove do fim e salva na const
+	const removeInicio = alunos.shift() // remove do inicio e salva na cons
+	delete alunos[1] //deleta item, mas mantém um index vazio no array
+	// console.log(`Slice: ${alunos.slice(0,3)}`);
+	// console.log(`Slice: ${alunos.slice(0,-1)}`);
+
+	console.log(alunos);
+
+	// console.log(alunos);
+	// console.log(alunos[0]); //altera
+	// console.log(alunos[1]);
 }
