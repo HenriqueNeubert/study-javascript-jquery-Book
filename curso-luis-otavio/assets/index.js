@@ -150,72 +150,114 @@ function testingCode06() {
 
 // testingCode07();
 function testingCode07() {
-	const callHello = hello("Henrique")
-	const callSum = sum(1,4)
+  const callHello = hello("Henrique");
+  const callSum = sum(1, 4);
 
-  	function hello(name) {
-		  return `Good Morning ${name}`
-	}
-	console.log(callHello);
+  function hello(name) {
+    return `Good Morning ${name}`;
+  }
+  console.log(callHello);
 
+  function sum(x = 1, y = 1) {
+    const result = x + y;
 
-	function sum(x = 1, y = 1){
-		const result = x + y
+    return result;
+  }
+  console.log(callSum);
 
-		return result
-	}
-	console.log(callSum)
+  const root = function (n) {
+    return n ** 0.5;
+  };
+  console.log(root(9));
 
-
-	const root = function(n){
-		return n ** 0.5
-	}
-	console.log(root(9))
-
-	const rootArrow = n => n ** 0.5
-	console.log(rootArrow(9))
+  const rootArrow = (n) => n ** 0.5;
+  console.log(rootArrow(9));
 }
 
-
-testingCode08()
+// testingCode08()
 function testingCode08() {
+  function createPerson(name, subname, age) {
+    return {
+      name: name,
+      subname: subname,
+      age: age,
+    };
+  }
 
-	function createPerson(name, subname, age){
-		return{
-			name: name,
-			subname: subname,
-			age : age
+  const person1 = createPerson("John", "Wayne", 55);
+  const person2 = createPerson("Marla", "Singer", 34);
+  const person3 = createPerson("Mia", "Wallace", 30);
+
+  console.log(person1.name, person1.subname);
+  console.log(person2.name, person2.subname);
+  console.log(person3.name, person3.subname);
+
+  const createPerson2 = {
+    name: "John",
+    subname: "Wayne",
+    age: 55,
+
+    fala() {
+      console.log(
+        `I'm Batman, i'm ${this.name} ${this.subname}, i have ${this.age} years old`
+      );
+    },
+
+    incrementAge() {
+      this.age++;
+    },
+  };
+
+  createPerson2.fala();
+  createPerson2.incrementAge();
+  createPerson2.fala();
+  createPerson2.incrementAge();
+  createPerson2.fala();
+  createPerson2.incrementAge();
+  createPerson2.fala();
+}
+
+testingCode09();
+function testingCode09() {
+  function createRegister() {
+    const form = document.querySelector(".form");
+	const result = document.querySelector(".result")
+	const person = []
+
+    // form.onsubmit = function (event) {
+	// 	event.preventDefault();
+	// };
+
+	function eventForm(event){
+		event.preventDefault();
+
+		const name = form.querySelector(".name");
+		const subname = form.querySelector(".subname");
+		const weight = form.querySelector(".weight");
+		const height = form.querySelector(".height");
+
+		const createPerson = {			
+			name: name.value,
+			subname: subname.value,
+			weight: weight.value,
+            height: height.value
 		}
-	}
-	
-	const person1 = createPerson('John', 'Wayne', 55)
-	const person2 = createPerson('Marla', 'Singer', 34)
-	const person3 = createPerson('Mia', 'Wallace', 30)
 
-	console.log(person1.name, person1.subname);
-	console.log(person2.name, person2.subname);
-	console.log(person3.name, person3.subname);
+		person.push(createPerson)
 
-	const createPerson2 = {
-		name: 'John',
-        subname: 'Wayne',
-        age : 55,
+		console.log(person);
+		result.innerHTML = 
+		`Name: ${createPerson.name} </br>
+		Subname: ${createPerson.subname} <br>
+		Weight: ${createPerson.weight} <br>
+	    Height: ${createPerson.height}
+		</br></br></br>`
+		console.log(createPerson.name);
 
-		fala(){
-			console.log(`I'm Batman, i'm ${this.name} ${this.subname}, i have ${this.age} years old`);
-		},
 
-		incrementAge(){
-			this.age++;
-		}
 	}
 
-	createPerson2.fala()
-	createPerson2.incrementAge()
-	createPerson2.fala()
-	createPerson2.incrementAge()
-	createPerson2.fala()
-	createPerson2.incrementAge()
-	createPerson2.fala()
-
+	form.addEventListener('submit', eventForm)
+	}
+  createRegister();
 }
