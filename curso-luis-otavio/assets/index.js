@@ -88,16 +88,16 @@ function number() {
   const numberInteger = document.getElementById("numberInteger");
 
   if (numberDigit !== 0 && numberNan == false) {
-    number.innerHTML = `<p>1 - This is digited number : ${numberDigit}</p> </br>`;
+    number.innerHTML = `<p>1 - This is the number typed : ${numberDigit}</p> </br>`;
   } else {
-    number.innerHTML = `<p>1 - Error (Please: digite a valid number!): ${numberDigit}</p> </br>`;
+    number.innerHTML = `<p>1 - Error (Please: enter a valid number!): ${numberDigit}</p> </br>`;
   }
 
   if (numberNan == false) {
-    numberDivNan.innerHTML = `<p>2 - This is a number: NaN = ${numberNan}</p> </br>`;
+    numberDivNan.innerHTML = `<p>2 - This is the number: NaN = ${numberNan}</p> </br>`;
   }
   if (numberNan == true) {
-    numberDivNan.innerHTML = `<p>2 - This is'not a number: NaN = ${numberNan}</p> </br>`;
+    numberDivNan.innerHTML = `<p>2 - This is not the number: NaN = ${numberNan}</p> </br>`;
   }
 
   numberRoundUp.innerHTML = `<p>3 - Number round up: ${Math.ceil(
@@ -106,14 +106,14 @@ function number() {
   numberRoundDown.innerHTML = `<p>4 - Number round down: ${Math.floor(
     numberDigit
   )}</p> </br>`;
-  numberDecimalTwo.innerHTML = `<p>5 - Number in two decimal: ${numberDigit.toFixed(
+  numberDecimalTwo.innerHTML = `<p>5 - Number in two decimal places: ${numberDigit.toFixed(
     2
   )}</p> </br>`;
   numberRoot.innerHTML = `<p>6 - Root: ${numberDigit ** 0.5} </br></p>`;
 
   if (Number.isInteger(numberDigit) == true) {
-    numberInteger.innerHTML = `<p>7 - Number is interager? Yes, the number is integer</p> </br>`;
+    numberInteger.innerHTML = `<p>7 - Is the Number interager? Yes, the number is integer</p> </br>`;
   } else {
-    numberInteger.innerHTML = `<p>7 - Number is interager? No, the number not is integer</p> </br>`;
+    numberInteger.innerHTML = `<p>7 - Is the Number interager? No, the number is not integer</p> </br>`;
   }
 }
