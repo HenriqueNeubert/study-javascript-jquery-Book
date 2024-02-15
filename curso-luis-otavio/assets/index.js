@@ -148,7 +148,7 @@ function testingCode06() {
   // console.log(alunos[1]);
 }
 
-testingCode07();
+// testingCode07();
 function testingCode07() {
 	const callHello = hello("Henrique")
 	const callSum = sum(1,4)
@@ -173,7 +173,49 @@ function testingCode07() {
 	console.log(root(9))
 
 	const rootArrow = n => n ** 0.5
-	}
 	console.log(rootArrow(9))
+}
+
+
+testingCode08()
+function testingCode08() {
+
+	function createPerson(name, subname, age){
+		return{
+			name: name,
+			subname: subname,
+			age : age
+		}
+	}
+	
+	const person1 = createPerson('John', 'Wayne', 55)
+	const person2 = createPerson('Marla', 'Singer', 34)
+	const person3 = createPerson('Mia', 'Wallace', 30)
+
+	console.log(person1.name, person1.subname);
+	console.log(person2.name, person2.subname);
+	console.log(person3.name, person3.subname);
+
+	const createPerson2 = {
+		name: 'John',
+        subname: 'Wayne',
+        age : 55,
+
+		fala(){
+			console.log(`I'm Batman, i'm ${this.name} ${this.subname}, i have ${this.age} years old`);
+		},
+
+		incrementAge(){
+			this.age++;
+		}
+	}
+
+	createPerson2.fala()
+	createPerson2.incrementAge()
+	createPerson2.fala()
+	createPerson2.incrementAge()
+	createPerson2.fala()
+	createPerson2.incrementAge()
+	createPerson2.fala()
 
 }
