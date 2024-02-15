@@ -66,14 +66,43 @@
 // console.log(Number.isInteger(num1));
 
 
-let numero1 = 9.542354
+// let numero1 = 9.542354
 // let numero2 = Math.floor(numero1) // Arredondamento para baixo
 // let numero2 = Math.ceil(numero1) // Arredondamento para cima
 // let numero2 = Math.round(numero1) // Arredondamento para o mais próximo
 // console.log(Math.max(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o maior número
 // console.log(Math.min(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o menor número
 
-const aleatorio = Math.round(Math.random() * (10 - 5) + 5) 
-console.log(aleatorio)
+// const aleatorio = Math.round(Math.random() * (10 - 5) + 5) 
+// console.log(aleatorio)
 
 // console.log(numero2);
+
+number()
+function number(){
+    const number = document.getElementById('number')//numero impresso
+    const numberDigit = Number(prompt("Digit a number:"))//numero digitado
+    const numberDivNan = document.getElementById('numberDivNan')//numero impresso
+    const numberNan = isNaN(numberDigit)
+    
+    if (numberDigit !== 0 && numberNan == false){
+        number.innerHTML = `<p>1 - This is digited number : ${numberDigit}</p> </br>`
+        console.log('digito aceito');
+    }else{
+        number.innerHTML = `<p>1 - Error (Please: digite a valid number!): ${numberDigit}</p> </br>`
+        console.log('digito não aceito');
+    }
+    //Raiz quadrada
+
+    if(numberNan == false){
+        numberDivNan.innerHTML = `2 - This is a number: NaN = ${numberNan} </br>`   
+    }
+    if(numberNan == true){
+        numberDivNan.innerHTML = `2 - This is'not a number: NaN = ${numberNan} </br>`
+    }
+    
+    //Arredondar baixo
+    //Arredondar cima
+    //Duas casas decimais 
+    
+}
