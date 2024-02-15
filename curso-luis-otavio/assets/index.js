@@ -1,91 +1,86 @@
 // testingCode01()
-function testingCode01(){
-	const testingConfirm = confirm("Confirmado?")
-	let num1 = prompt("Digite aqui!")
-	let num2 = prompt("Digite aqui!")
-	
-	console.log("hello World!!!");
-	console.log(testingConfirm);
-	
-	num1 = Number(num1);
-	num2 = Number(num2);
-	const result = String(num1 + num2)
-	
-	console.log(result);
+function testingCode01() {
+  const testingConfirm = confirm("Confirmado?");
+  let num1 = prompt("Digite aqui!");
+  let num2 = prompt("Digite aqui!");
+
+  console.log("hello World!!!");
+  console.log(testingConfirm);
+
+  num1 = Number(num1);
+  num2 = Number(num2);
+  const result = String(num1 + num2);
+
+  console.log(result);
 }
 
 // testingCode02()
-function testingCode02(){
-	let varA = 'A' //b
-	let varB = 'B' //c
-	let varC = 'C' //a
+function testingCode02() {
+  let varA = "A"; //b
+  let varB = "B"; //c
+  let varC = "C"; //a
 
-	varAtemp = varA
-	varBtemp = varB
-	varCtemp = varC
+  varAtemp = varA;
+  varBtemp = varB;
+  varCtemp = varC;
 
-	varA = varBtemp
-	varB = varCtemp
-	varC = varAtemp
+  varA = varBtemp;
+  varB = varCtemp;
+  varC = varAtemp;
 
-	OR
+  OR[(varA, varB, varC)] = [varB, varC, varA];
 
-	[varA, varB, varC] = [varB, varC, varA]
-
-	console.log(varA, varB, varC);
-	console.log(varA)
-
+  console.log(varA, varB, varC);
+  console.log(varA);
 }
 
 // testingCode03()
-function testingCode03(){
-	let nameUser = "henrique"
-	let newName = replaceName(nameUser)
+function testingCode03() {
+  let nameUser = "henrique";
+  let newName = replaceName(nameUser);
 
-	function replaceName(nameUser){
-		nameUser = nameUser.replace('henrique', 'Neubert'); // altera param
-		nameUser = nameUser.replace(/e/g, '#'); // g = todos os 'E'
-		nameUser = nameUser.slice(0, 4); //
-		console.log(nameUser + ': Cortado');// para retirar param
-		return nameUser
-	}
-	console.log(`${newName} tem 18 anos`);
+  function replaceName(nameUser) {
+    nameUser = nameUser.replace("henrique", "Neubert"); // altera param
+    nameUser = nameUser.replace(/e/g, "#"); // g = todos os 'E'
+    nameUser = nameUser.slice(0, 4); //
+    console.log(nameUser + ": Cortado"); // para retirar param
+    return nameUser;
+  }
+  console.log(`${newName} tem 18 anos`);
 
-	console.log(nameUser.indexOf('u')); //procura pelo index
-	console.log(nameUser.match(/[a-z]/g));
-	console.log(nameUser.search(/i/g)); //pesquisa por param
+  console.log(nameUser.indexOf("u")); //procura pelo index
+  console.log(nameUser.match(/[a-z]/g));
+  console.log(nameUser.search(/i/g)); //pesquisa por param
 }
 
 // testingCode04()
-function testingCode04(){
+function testingCode04() {
+  let number1 = 15.243432;
+  let number2 = 2.5;
 
-	let number1 = 15.243432
-	let number2 = 2.5
+  console.log(number1.toString() + number2);
+  console.log(number1.toString(2)); //Representação binária
+  console.log(number1.toFixed(2)); //Arredondar (2 casas)
+  console.log(Number.isInteger(number1)); // verifica se o número é inteiro
 
-	console.log(number1.toString() + number2);
-	console.log(number1.toString(2)); //Representação binária
-	console.log(number1.toFixed(2));//Arredondar (2 casas)
-	console.log(Number.isInteger(number1));// verifica se o número é inteiro
+  let temp = number1 * "s";
+  console.log(Number.isNaN(temp)); //verifica se a conta é valida via tru/false
 
-	let temp = number1 * 's'
-	console.log(Number.isNaN(temp)); //verifica se a conta é valida via tru/false
+  num1 = parseFloat(number1.toFixed(2)); // Transforma em float
+  console.log(num1);
+  console.log(Number.isInteger(num1));
 
-	num1 = parseFloat(number1.toFixed(2)) // Transforma em float
-	console.log(num1);
-	console.log(Number.isInteger(num1));
+  let numero1 = 9.542354;
+  // let numero2 = Math.floor(numero1) // Arredondamento para baixo
+  // let numero2 = Math.ceil(numero1) // Arredondamento para cima
+  let numero2 = Math.round(numero1); // Arredondamento para o mais próximo
+  console.log(Math.max(1, 3, 45, 6786, 676, 789, 7865756, 655, 56756, 65)); //Mostra o maior número
+  console.log(Math.min(1, 3, 45, 6786, 676, 789, 7865756, 655, 56756, 65)); //Mostra o menor número
 
-	let numero1 = 9.542354
-	// let numero2 = Math.floor(numero1) // Arredondamento para baixo
-	// let numero2 = Math.ceil(numero1) // Arredondamento para cima
-	let numero2 = Math.round(numero1) // Arredondamento para o mais próximo
-	console.log(Math.max(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o maior número
-	console.log(Math.min(1,3,45,6786,676,789,7865756,655,56756,65));//Mostra o menor número
+  const aleatorio = Math.round(Math.random() * (10 - 5) + 5);
+  console.log(aleatorio);
 
-	const aleatorio = Math.round(Math.random() * (10 - 5) + 5)
-	console.log(aleatorio)
-
-	console.log(numero2);
-
+  console.log(numero2);
 }
 
 // testingCode05();
@@ -132,23 +127,53 @@ function testingCode05() {
 }
 
 // ARRAYS //
-testingCode06();
-function testingCode06(){
-	const alunos = ["Henrique", "Carol", "Luis"]
-	alunos[0] = "Neubert"
-	alunos[alunos.length] = "Carlos"
-	alunos[alunos.length] = "João" //para adicionar
-	alunos.push("Otavio") // melhor forma para adicionar
-	alunos.unshift("José") //adiciona na frente
-	const removido = alunos.pop() //remove do fim e salva na const
-	const removeInicio = alunos.shift() // remove do inicio e salva na cons
-	delete alunos[1] //deleta item, mas mantém um index vazio no array
-	// console.log(`Slice: ${alunos.slice(0,3)}`);
-	// console.log(`Slice: ${alunos.slice(0,-1)}`);
+// testingCode06();
+function testingCode06() {
+  const alunos = ["Henrique", "Carol", "Luis"];
+  alunos[0] = "Neubert";
+  alunos[alunos.length] = "Carlos";
+  alunos[alunos.length] = "João"; //para adicionar
+  alunos.push("Otavio"); // melhor forma para adicionar
+  alunos.unshift("José"); //adiciona na frente
+  const removido = alunos.pop(); //remove do fim e salva na const
+  const removeInicio = alunos.shift(); // remove do inicio e salva na cons
+  delete alunos[1]; //deleta item, mas mantém um index vazio no array
+  // console.log(`Slice: ${alunos.slice(0,3)}`);
+  // console.log(`Slice: ${alunos.slice(0,-1)}`);
 
-	console.log(alunos);
+  console.log(alunos);
 
-	// console.log(alunos);
-	// console.log(alunos[0]); //altera
-	// console.log(alunos[1]);
+  // console.log(alunos);
+  // console.log(alunos[0]); //altera
+  // console.log(alunos[1]);
+}
+
+testingCode07();
+function testingCode07() {
+	const callHello = hello("Henrique")
+	const callSum = sum(1,4)
+
+  	function hello(name) {
+		  return `Good Morning ${name}`
+	}
+	console.log(callHello);
+
+
+	function sum(x = 1, y = 1){
+		const result = x + y
+
+		return result
+	}
+	console.log(callSum)
+
+
+	const root = function(n){
+		return n ** 0.5
+	}
+	console.log(root(9))
+
+	const rootArrow = n => n ** 0.5
+	}
+	console.log(rootArrow(9))
+
 }
