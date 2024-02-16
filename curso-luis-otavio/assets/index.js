@@ -246,12 +246,12 @@ function testingCode09() {
 		person.push(createPerson)
 
 		console.log(person);
-		result.innerHTML = 
-		`Name: ${createPerson.name} </br>
+		result.innerHTML += 
+		`<div>Name: ${createPerson.name} </br>
 		Subname: ${createPerson.subname} <br>
 		Weight: ${createPerson.weight} <br>
 	    Height: ${createPerson.height}
-		</br></br></br>`
+		</br></div>`
 		console.log(createPerson.name);
 
 
