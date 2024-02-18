@@ -3,7 +3,7 @@
 :root{
     --primary-color: #60c2e8;
     --primary-color-dark: #222;
-    --primary-color-gray: #4d4c4c;
+    --primary-color-gray: #2b2b2b;
 }
 
 *{
@@ -19,13 +19,15 @@ body{
     font-size: 1.3em;
     line-height: 1.5em;
     font-family: 'Open sans', sans-serif;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color);
 }
 
 .container{
     padding: 20px;
     margin: 20px auto;
     max-width: 640px;
+    background-color: var(--primary-color-gray);
+    border-radius: 10px;
 }
 
 form input, form label, form button{
@@ -56,11 +58,12 @@ form button{
     background-color: var(--primary-color);
     cursor: pointer;
     transition: 500ms linear; 
+    margin-top: 30px;
 }
 
-form button:hover{
+form button:hover, form button:active{
     transition: 500ms linear; 
     color: #fff;
-
+    border: 2px solid #fff;
     background-color: var(--primary-color-gray);
 }
