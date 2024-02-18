@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --primary-color: #60c2e8;
+    --primary-color-dark: #222;
+    --primary-color-gray: #4d4c4c;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+    color: #fff;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-family: 'Open sans', sans-serif;
+    background-color: var(--primary-color-dark);
+}
+
+.container{
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 640px;
+}
+
+form input, form label, form button{
+    width: 100%;
+
+    display: block;
+    margin-bottom: 10px;
+    border: none;
+}
+
+form input{
+    height: 50px;
+
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+form input:focus{
+    outline: 2px solid var(--primary-color);
+}
+
+form button{
+    color: var(--primary-color-dark);
+    border: none;
+    font-size: 18px;
+    font-weight: 800;
+    height: 50px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: 500ms linear; 
+}
+
+form button:hover{
+    transition: 500ms linear; 
+    color: #fff;
+
+    background-color: var(--primary-color-gray);
+}
