@@ -217,47 +217,44 @@ function testingCode08() {
   createPerson2.fala();
 }
 
-testingCode09();
+// testingCode09();
 function testingCode09() {
   function createRegister() {
     const form = document.querySelector(".form");
-	const result = document.querySelector(".result")
-	const person = []
+    const result = document.querySelector(".result");
+    const person = [];
 
     // form.onsubmit = function (event) {
-	// 	event.preventDefault();
-	// };
+    // 	event.preventDefault();
+    // };
 
-	function eventForm(event){
-		event.preventDefault();
+    function eventForm(event) {
+      event.preventDefault();
 
-		const name = form.querySelector(".name");
-		const subname = form.querySelector(".subname");
-		const weight = form.querySelector(".weight");
-		const height = form.querySelector(".height");
+      const name = form.querySelector(".name");
+      const subname = form.querySelector(".subname");
+      const weight = form.querySelector(".weight");
+      const height = form.querySelector(".height");
 
-		const createPerson = {			
-			name: name.value,
-			subname: subname.value,
-			weight: weight.value,
-            height: height.value
-		}
+      const createPerson = {
+        name: name.value,
+        subname: subname.value,
+        weight: weight.value,
+        height: height.value,
+      };
 
-		person.push(createPerson)
+      person.push(createPerson);
 
-		console.log(person);
-		result.innerHTML += 
-		`<div>Name: ${createPerson.name} </br>
+      console.log(person);
+      result.innerHTML += `<div>Name: ${createPerson.name} </br>
 		Subname: ${createPerson.subname} <br>
 		Weight: ${createPerson.weight} <br>
 	    Height: ${createPerson.height}
-		</br></div>`
-		console.log(createPerson.name);
+		</br></div>`;
+      console.log(createPerson.name);
+    }
 
-
-	}
-
-	form.addEventListener('submit', eventForm)
-	}
+    form.addEventListener("submit", eventForm);
+  }
   createRegister();
 }
