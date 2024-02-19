@@ -67,3 +67,11 @@ form button:hover, form button:active{
     border: 2px solid #fff;
     background-color: var(--primary-color-gray);
 }
+
+#messageResult{
+    background-color: var(--primary-color);
+}
+
+#messageResult p{
+    padding: 5px;
+}
