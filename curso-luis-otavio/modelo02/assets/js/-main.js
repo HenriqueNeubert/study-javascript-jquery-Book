@@ -5,10 +5,18 @@ let messageResult = document.querySelector('#messageResult')
 
 function eventForm(event) {
     event.preventDefault();
-    weigth = inputWeigth.value
-    heigth = inputHeigth.value
+    weigth = Number(inputWeigth.value)
+    heigth = Number(inputHeigth.value)
 
-    checkInputValue(weigth, heigth)
+    if(!weigth){
+        messageIMC(`<p>Digite um Número Válido!</p>`)
+        return
+    }else if (!heigth){
+        messageIMC(`<p>Digite um Número Válido!</p>`)
+        return
+    }else{
+        checkInputValue(weigth, heigth)
+    }
 }
 mainFormIMC.addEventListener("submit", eventForm);
 
@@ -45,14 +53,9 @@ function cleanMessage(){
 }
 
 function checkInputValue(weigth, heigth){
-    
-    if(weigth !== Number || heigth !== Number){
+    if(weigth === '' && heigth === ''){
         cleanMessage()
-        messageIMC('Você não digitou um número, tente novamente!')
-        if(weigth === '' && heigth === ''){
-            cleanMessage()
-            messageIMC('Digite Seu peso e Sua Altura!')
-        }
+        messageIMC('Digite Seu peso e Sua Altura!')
     }else if(weigth === ''){
         cleanMessage()
         messageIMC('Digite seu Peso!')
