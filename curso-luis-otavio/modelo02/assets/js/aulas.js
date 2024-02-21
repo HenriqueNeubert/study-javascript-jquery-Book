@@ -41,10 +41,33 @@ function data(){
     dataBrasil = formataData(dataAtual)
     console.log(dataAtual)
 }
-data()
+// data()
 
 
 function switchAndCase(){
+    let diaSemana = 0;
+    let diaSemanaTexto;
 
+    switch (diaSemana) {
+        case 0:
+            diaSemanaTexto = "Domingo";
+            break;
+        case 1:
+            diaSemanaTexto = "Segunda";
+            break;
+        case 2:
+            diaSemanaTexto = "Terça"
+            break;
+        default:
+            diaSemanaTexto = "Padrão";
+            break;
+    }
+    console.log(diaSemanaTexto);
 }
-switchAndCase()
+// switchAndCase()
+
+function exerciseDateSwitch(){
+    let titleDate = document.querySelector('#titleDate')
+    titleDate.innerHTML = 'HENRIQUE'
+}
+exerciseDateSwitch()
