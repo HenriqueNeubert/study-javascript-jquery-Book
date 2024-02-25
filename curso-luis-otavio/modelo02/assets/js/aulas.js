@@ -192,3 +192,29 @@ function exerciseDateSwitch2() {
   titleDate.innerHTML += `${zeroAEsquerda(data.getMinutes())}`
 }
 // exerciseDateSwitch2()
+
+function desestruturacao(){
+
+  const pessoa = {
+    name: 'Jhon',
+    subName: 'Doe',
+    age: 30,
+    address: {
+      street: 'Av Brazil',
+      number: 312
+    }
+  }
+
+  const {name, ...resto} = pessoa
+  console.log(name, resto);
+
+
+  // const { name = 'Não existe', subName } = pessoa
+  // const { address: {street: st, number: n = 25}, address } = pessoa
+
+  // console.log(name, subName)
+  // console.log(st, n)
+  // console.log(address)
+
+}
+desestruturacao()
