@@ -217,4 +217,28 @@ function desestruturacao(){
   // console.log(address)
 
 }
-desestruturacao()
+// desestruturacao()
+
+function forLoop(){
+
+  for(let i = 0; i<= 5; i++){
+    // console.log(i);
+  }
+
+  for(let i = 500; i >= 400; i -=10){
+    // console.log(i);
+  }
+
+  for(let i = 0; i <= 30; i++){
+    const par = i % 2 === 0 ? 'Par' : 'Ímpar';
+    // console.log(i, par);
+  }
+
+  const letras = ['a','b', 'c']
+
+  for(let i = 0; i < letras.length; i++){
+    console.log(letras[i], - i);
+  }
+
+}
+forLoop()
