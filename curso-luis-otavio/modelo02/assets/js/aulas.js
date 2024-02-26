@@ -266,8 +266,21 @@ function forLoop() {
 function forInLoop() {
   const frutas = ['Pera', 'Maçã', 'Uva']
 
-  for(let i in frutas) {
-    console.log(frutas[i]);
+  // for(let i in frutas) {
+  //   console.log(frutas[i]);
+  // }
+
+  for(let index of frutas) {
+    console.log(frutas); //não possui index
   }
-}
+
+  frutas.forEach(function(el, i, array){
+    console.log(el,i ,array);
+  })
+
+  // for - geralmente usado com iteráveis (arrays ou string)
+  // for in - retorna indice ou chave (arrays, string ou objetos)
+  // for of - retorna o valor em si (iteráveis, arrays ou string)
+
+} 
 forInLoop()
