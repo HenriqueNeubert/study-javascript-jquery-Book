@@ -174,13 +174,13 @@ function exerciseDateSwitch2() {
   }
   function getDayWeek(diaSemana) {
     let diaSemanaTexto = ['Domingo', 'segunda', 'terça', 'quarta', 'quinta']
-    
+
     return diaSemanaTexto[diaSemana]
   }
 
   function getMes(numeroMes) {
     let nomeMes = ['Janeiro', 'Fevereiro', 'Março', 'Abril']
-    
+
     return nomeMes[numeroMes]
   }
   getMes(2)
@@ -193,7 +193,7 @@ function exerciseDateSwitch2() {
 }
 // exerciseDateSwitch2()
 
-function desestruturacao(){
+function desestruturacao() {
 
   const pessoa = {
     name: 'Jhon',
@@ -205,7 +205,7 @@ function desestruturacao(){
     }
   }
 
-  const {name, ...resto} = pessoa
+  const { name, ...resto } = pessoa
   console.log(name, resto);
 
 
@@ -219,38 +219,38 @@ function desestruturacao(){
 }
 // desestruturacao()
 
-function forLoop(){
+function forLoop() {
 
-  for(let i = 0; i<= 5; i++){
+  for (let i = 0; i <= 5; i++) {
     // console.log(i);
   }
 
-  for(let i = 500; i >= 400; i -=10){
+  for (let i = 500; i >= 400; i -= 10) {
     // console.log(i);
   }
 
-  for(let i = 0; i <= 30; i++){
+  for (let i = 0; i <= 30; i++) {
     const par = i % 2 === 0 ? 'Par' : 'Ímpar';
     // console.log(i, par);
   }
 
-  const letras = ['a','b', 'c']
+  const letras = ['a', 'b', 'c']
 
-  for(let i = 0; i < letras.length; i++){
+  for (let i = 0; i < letras.length; i++) {
     // console.log(letras[i], - i);
   }
 
   const elementos = [
-    {tag: 'p', texto: 'Frase 1'},
-    {tag: 'div', texto: 'Frase 2'},
-    {tag: 'footer', texto: 'Frase 3'},
-    {tag: 'section', texto: 'Frase 4'},
+    { tag: 'p', texto: 'Frase 1' },
+    { tag: 'div', texto: 'Frase 2' },
+    { tag: 'footer', texto: 'Frase 3' },
+    { tag: 'section', texto: 'Frase 4' },
   ]
 
   const containerExercise = document.querySelector('.containerExercise')
   const div = document.createElement('div')
 
-  for(let i = 0; i< elementos.length; i++){
+  for (let i = 0; i < elementos.length; i++) {
     let { tag, texto } = elementos[i]
     let tagCriada = document.createElement(tag)
     tagCriada.innerHTML = texto
@@ -261,4 +261,13 @@ function forLoop(){
   //REFAZER ESTE EXERCICIO
 
 }
-forLoop()
+// forLoop()
+
+function forInLoop() {
+  const frutas = ['Pera', 'Maçã', 'Uva']
+
+  for(let i in frutas) {
+    console.log(frutas[i]);
+  }
+}
+forInLoop()
